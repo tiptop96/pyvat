@@ -40,3 +40,8 @@ ISO_CC_TO_EC_CC = {
 """Mapping of ISO Country Codes to European Commission Country Codes
 """
 
+EC_CC_TO_ISO_CC = {value:key for key, value in ISO_CC_TO_EC_CC.items()}
+"""Mapping of European Commision Country Codes to ISO 3166-1 alpha-2 Country Codes
+(This table is just the reverse of the ISO_CC_TO_EC_CC)
+"""
+
