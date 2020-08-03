@@ -11,7 +11,7 @@ EU_COUNTRY_CODES = set([
     'FI',  # Finland.
     'FR',  # France.
     'GB',  # United Kingdom.
-    'EL',  # Greece.
+    'GR',  # Greece.
     'HR',  # Croatia.
     'HU',  # Hungary.
     'IE',  # Ireland.
@@ -32,3 +32,11 @@ EU_COUNTRY_CODES = set([
 
 Represented by ISO 3166-1 alpha-2 country codes.
 """
+
+ISO_CC_TO_EC_CC = {
+    'GR': 'EL',     # Greece
+    'GB': 'UK',      # UK
+}
+"""Mapping of ISO Country Codes to European Commission Country Codes
+"""
+
