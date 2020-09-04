@@ -38,6 +38,9 @@ class ViesRegistry(Registry):
         if country_code == 'GR':
             country_code = 'EL'
 
+        if country_code == 'UK':
+            country_code = 'GB'
+
         # Request information about the VAT number.
         result = VatNumberCheckResult()
 

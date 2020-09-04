@@ -130,6 +130,9 @@ def decompose_vat_number(vat_number, country_code=None):
         if country_code == 'EL':
             country_code = 'GR'
 
+        if country_code == 'UK':
+            country_code = 'GB'
+
         if country_code not in VAT_REGISTRIES:
             try:
                 if not pycountry.countries.get(alpha_2=country_code):
@@ -141,6 +144,8 @@ def decompose_vat_number(vat_number, country_code=None):
     elif vat_number[0:2] == country_code:
         vat_number = vat_number[2:]
     elif country_code == 'GR' and vat_number[0:2] == 'EL':
+        vat_number = vat_number[2:]
+    elif country_code == 'UK' and vat_number[0:2] == 'GB':
         vat_number = vat_number[2:]
 
     return vat_number, country_code
